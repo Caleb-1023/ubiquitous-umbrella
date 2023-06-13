@@ -66,7 +66,7 @@ const Login = () => {
                 </div>
                 <input type="submit" value="Log In" className="bg-[#111f39] hover:bg-[#0a1323] w-full text-white py-2 rounded-lg mb-2" />
             </form>
-            {/* <p className="text-gray-400 text-sm">Forgot your password? <a href="#" className="text-[#0a1323] hover:underline">Reset it here.</a></p> */}
+            <p className="text-gray-400 text-sm">Login in as <Link to={'/accounts/admin'} className="text-[#0a1323] hover:underline">Admin</Link></p>
             <p className="text-gray-400 text-sm">Don't have an account yet? <Link to={'/accounts/signup'} className="text-[#0a1323] hover:underline">Sign up instead.</Link></p>
         </div>
     </div>
