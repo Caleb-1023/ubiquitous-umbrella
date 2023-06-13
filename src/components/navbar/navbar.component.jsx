@@ -21,7 +21,7 @@ const Navbar = () => {
         if (loggedInUser) {
           const foundUser = JSON.parse(loggedInUser);
           setUser(foundUser);
-          console.log(user)
+        //   console.log(user)
         } 
         // else {
         //     navigate('/accounts/login')
@@ -35,10 +35,10 @@ const Navbar = () => {
                 <Link to={'/'}><img src="/cumart.png" alt="logo" className="w-14" /></Link>
                 <ul className="flex items-center justify-around space-x-3">
                     <li><Link to={'/listings'}>All Listings</Link></li>
-                    <li>FAQs</li>
-                    <li>About</li>
+                    <li><Link to={'/faqs'}>FAQs</Link></li>
+                    <li><Link to={'/about'}>About</Link></li>
                 </ul>
-                <a href="#" className="text-purple-800 px-3 py-2 rounded border-[1px] border-purple-800 outline-none"><i className="fa-regular fa-comments"></i> Feedback</a>
+                <a href="#" target="_blank" rel="noreferrer" className="text-purple-800 px-3 py-2 rounded border-[1px] border-purple-800 outline-none"><i className="fa-regular fa-comments"></i> Feedback</a>
             </div>
 
             {user ? <>
@@ -51,8 +51,8 @@ const Navbar = () => {
                     </>
                     : 
                     <>
-                        <Link to={'account'} className="capitalize text-black">{user.name}</Link>
                         <Link to={'listings/add-product'} className="capitalize text-black"><i className="fa-solid fa-plus"></i> Add Product</Link>
+                        <Link to={'account'} className="capitalize text-black">{user.name}</Link>
                     </>
                     }
                     <button onClick={handleLogout} className="text-purple-800 border-purple-800 border-[1px] p-1 rounded">Log out</button>

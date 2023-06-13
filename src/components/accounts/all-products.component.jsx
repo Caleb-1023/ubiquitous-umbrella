@@ -17,7 +17,7 @@ const AllProducts = () => {
         const user = JSON.parse(localStorage.getItem('user'))
         if (user?.roles === 'admin') {
             const response = await axios.get(GET_PRODUCTS, {headers: {Authorization: `Bearer ${user.accessToken}`}})
-            console.log(response)
+            // console.log(response)
             setProducts(response.data.products)
             setLoading(false)
         } else {

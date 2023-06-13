@@ -42,7 +42,7 @@ const HallListings = () => {
     const getProductsByLocation = async (h) => {
         setLoading(true)
         const response = await axios.get(`${GET_PRODUCTS_LOCATION}${h ? h : hall}`)
-        console.log(response)
+        // console.log(response)
         setProducts(response.data.hall)
         setLoading(false)
     }

@@ -21,7 +21,7 @@ const AddProduct = () => {
     const token = JSON.parse(localStorage.getItem('user')).accessToken
 
     const handleChange = async (file) => {
-        console.log(file)
+        // console.log(file)
         // const formData = new FormData()
         // formData.append('image', file)
         // const response = await axios.post("http://165.232.123.217:8029/predict", formData ,{
@@ -47,8 +47,8 @@ const AddProduct = () => {
             formData.append('category', category)
             formData.append('location', location)
             // console.log(image)
-            const response = await axios.post(UPLOAD_PRODUCT, formData, {headers: {Authorization: `Bearer ${token}`, "Content-Type":"multipart/form-data", 'Access-Control-Allow-Origin': 'http://localhost:5173',}})
-            console.log(response)
+            await axios.post(UPLOAD_PRODUCT, formData, {headers: {Authorization: `Bearer ${token}`, "Content-Type":"multipart/form-data", 'Access-Control-Allow-Origin': 'http://localhost:5173',}})
+            // console.log(response)
             setLoading(false)
             setAdded(true)
         } catch(err) {

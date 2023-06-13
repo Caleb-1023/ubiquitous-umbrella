@@ -18,8 +18,8 @@ const Product = () => {
         const user = JSON.parse(localStorage.getItem('user'))
         if (user) {
             if (user?.roles === 'student') {
-            const add = await axios.post(ADD_WISHLIST, {"product": [product]}, {headers: {Authorization: `Bearer ${user.accessToken}`}} )
-            console.log(add)
+            await axios.post(ADD_WISHLIST, {"product": [product]}, {headers: {Authorization: `Bearer ${user.accessToken}`}} )
+            // console.log(add)
             }
         } else {
             alert("You're not logged in")
@@ -29,7 +29,7 @@ const Product = () => {
     const getProduct = async () => {
         setLoading(true)
         const response = await axios.get(`${GET_PRODUCT}${productSlug}`)
-        console.log(response)
+        // console.log(response)
         setProduct(response.data.product)
         setLoading(false)
     }

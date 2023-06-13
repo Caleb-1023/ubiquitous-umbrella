@@ -25,7 +25,7 @@ const SearchListings = () => {
     const getProducts = async () => {
         setLoading(true)
         const response = await axios.get(`${SEARCH_PRODUCTS}${query}`, {headers: {"Content-Type": "application/json"}} )
-        console.log(response)
+        // console.log(response)
         setProducts(response.data.name)
         setLoading(false)
     }

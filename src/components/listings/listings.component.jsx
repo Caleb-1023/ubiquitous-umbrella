@@ -28,7 +28,7 @@ const Listings = () => {
     const getProducts = async () => {
         setLoading(true)
         const response = await axios.get(GET_PRODUCTS)
-        console.log(response)
+        // console.log(response)
         setProducts(response.data.product)
         setLoading(false)
     }

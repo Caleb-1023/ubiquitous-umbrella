@@ -35,7 +35,7 @@ const CategoryListings = () => {
     const getProductsByCategory = async (c) => {
         setLoading(true)
         const response = await axios.get(`${GET_PRODUCTS_CATEGORY}${c ? c : category}`)
-        console.log(response)
+        // console.log(response)
         setProducts(response.data.category)
         setLoading(false)
     }

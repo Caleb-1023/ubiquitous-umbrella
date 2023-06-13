@@ -21,7 +21,7 @@ const Admin = () => {
             const response = await axios.post(ADMIN_LOGIN_URL, {userName:name, password:password}, {
                 headers: { 'Content-Type': 'application/json' },
             })
-            console.log(response)
+            // console.log(response)
             const accessToken = response?.data?.signature;
             const roles = "admin"
             localStorage.setItem('user', JSON.stringify({ name: 'Admin', roles, accessToken }))

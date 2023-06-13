@@ -15,7 +15,7 @@ const AllStudents = () => {
         const user = JSON.parse(localStorage.getItem('user'))
         if (user?.roles === 'admin') {
             const response = await axios.get(GET_STUDENTS, {headers: {Authorization: `Bearer ${user.accessToken}`}})
-            console.log(response)
+            // console.log(response)
             setStudents(response.data.students)
             setLoading(false)
         } else {

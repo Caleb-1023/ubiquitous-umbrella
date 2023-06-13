@@ -21,7 +21,7 @@ const Login = () => {
             }, {
                 headers: {"Content-Type": "application/json"}
             })
-            console.log(response)
+            // console.log(response)
             const accessToken = response?.data?.signature;
             const roles = "student"
             const name = response?.data?.student?.firstName;

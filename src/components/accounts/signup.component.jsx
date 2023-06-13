@@ -18,7 +18,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.post(SIGNUP_URL, {
+            await axios.post(SIGNUP_URL, {
                 "firstName": firstName,
                 "lastName": lastName,
                 "email": email,
@@ -28,7 +28,7 @@ const Signup = () => {
             }, {
                 headers: { "Access-Control-Allow-Origin": "*", }
             })
-            console.log(response)
+            // console.log(response)
             alert('Account Created')
             navigate('/accounts/login')
         } catch(err) {

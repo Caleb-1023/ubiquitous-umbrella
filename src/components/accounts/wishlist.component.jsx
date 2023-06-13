@@ -15,7 +15,7 @@ const Wishlist = () => {
     const getDetails = async () => {
         setLoading(true)
         const response = await axios.get(STUDENT_WISHLIST, {headers: {Authorization: `Bearer ${token}`}})
-        console.log(response)
+        // console.log(response)
         setProducts(response.data.wishlist)
         setLoading(false)
     }

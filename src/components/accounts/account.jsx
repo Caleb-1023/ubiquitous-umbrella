@@ -12,7 +12,7 @@ const Account = () => {
     const getDetails = async () => {
         setLoading(true)
         const response = await axios.get(GET_STUDENT, {headers: {Authorization: `Bearer ${token}`}})
-        console.log(response)
+        // console.log(response)
         setUser(response.data.student[0])
         setLoading(false)
     }
