@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react"
 import axios from "../../api/axios"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import useAuth from "../../hooks/useAuth";
 
 const ADMIN_LOGIN_URL = '/admin/login';
@@ -65,7 +65,7 @@ const Admin = () => {
                 </div>
                 <input type="submit" value="Log In" className="bg-[#111f39] hover:bg-[#0a1323] outline-none w-full text-white py-2 rounded-lg mb-2" />
             </form>
-            <p className="text-gray-400 text-sm">Forgot your password? <a href="#" className="text-[#0a1323] hover:underline">Reset it here.</a></p>
+            <p className="text-gray-400 text-sm">Login in as <Link to={'/accounts/login'} className="text-[#0a1323] hover:underline">Student</Link></p>
         </div>
     </div>
   )
