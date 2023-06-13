@@ -1,5 +1,5 @@
 import Categories from "./categories.component"
-import EditorPick from "./editor-pick.component"
+// import EditorPick from "./editor-pick.component"
 import Qualities from "./qualities.component"
 import Showcase from "./showcase.component"
 
@@ -9,7 +9,7 @@ const Home = () => {
         <Showcase />
         <Qualities />
         <Categories />
-        <EditorPick />
+        {/* <EditorPick /> */}
     </>
   )
 }

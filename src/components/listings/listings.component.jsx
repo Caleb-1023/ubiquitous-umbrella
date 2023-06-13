@@ -25,6 +25,22 @@ const Listings = () => {
     //     setSection(hall || category)
     // }
 
+    const [openHall, setOpenHall] = useState(false);
+    const [openCategory, setOpenCategory] = useState(false);
+
+    const handleOpenHall = () => {
+        setOpenHall(!openHall);
+        if (openCategory) {
+            setOpenCategory(!openCategory)
+        }
+    };
+    const handleOpenCategory = () => {
+        setOpenCategory(!openCategory);
+        if (openHall) {
+            setOpenHall(!openHall)
+        }
+    };
+
     const getProducts = async () => {
         setLoading(true)
         const response = await axios.get(GET_PRODUCTS)
@@ -61,21 +77,20 @@ const Listings = () => {
     <div>
         <div className="w-screen">
             <h1 className="heading-text text-center text-4xl capitalize">All Products</h1>
-            <p></p>
             <Search />
             {/* categories */}
-            <div className="w-full flex items-center justify-center">
-                <div className="grid grid-cols-4">
-                    {categories.map((c, i) => {
-                        return <Link key={i} to={`/products/categories/${c}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{c}</Link>
-                    })}
-                </div>
-                <div className="grid grid-cols-5">
-                    {halls.map((h, i) => {
-                        return <Link key={i} to={`/products/halls/${h}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{h}</Link>
-                    })}
-                </div>
-            </div>
+            
+            {/* <div className="relative">
+                <button onClick={handleOpen} className="p-3">Hall</button>
+                {open ? (
+                    <ul className="absolute rounded bottom-[-1] border bg-white text-black">
+                        {halls.map((h, i) => {
+                        return <li key={i} className="capitalize p-3 hover:bg-gray-200">
+                            <Link to={`/products/halls/${h}`}>{h}</Link>
+                        </li>})}
+                    </ul>
+                ) : null}
+            </div> */}
             {/* items */}
             <div className="w-screen min-h-screen">
             {loading ? 
@@ -84,6 +99,38 @@ const Listings = () => {
             </div>
             :
             <>
+                <div className="w-full flex items-center justify-center">
+                    {/* <div className="grid grid-cols-4">
+                        {categories.map((c, i) => {
+                            return <Link key={i} to={`/products/categories/${c}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{c}</Link>
+                        })}
+                    </div> */}
+                    <div className="relative">
+                        <button onClick={handleOpenCategory} className="p-3">Categories <i className="fa-solid fa-chevron-down fa-2xs"></i></button>
+                        {openCategory ? (
+                            <ul className="absolute rounded bottom-[-1] border bg-white text-black">
+                                {categories.map((c, i) => {
+                                return <Link key={i} to={`/products/categories/${c}`}><li className="capitalize py-1 px-4 hover:bg-gray-200">{c}</li></Link>
+                                })}
+                            </ul>
+                        ) : null}
+                    </div>
+                    <div className="relative">
+                        <button onClick={handleOpenHall} className="p-3">Hall <i className="fa-solid fa-chevron-down fa-2xs"></i></button>
+                        {openHall ? (
+                            <ul className="absolute rounded bottom-[-1] border bg-white text-black">
+                                {halls.map((h, i) => {
+                                return <Link key={i} to={`/products/halls/${h}`}><li className="capitalize py-1 px-4 hover:bg-gray-200">{h}</li></Link>
+                                })}
+                            </ul>
+                        ) : null}
+                    </div>
+                    {/* <div className="grid grid-cols-5">
+                        {halls.map((h, i) => {
+                            return <Link key={i} to={`/products/halls/${h}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{h}</Link>
+                        })}
+                    </div> */}
+                </div>
                 {products?.length > 0 ? 
                 <div className="max-w-6xl mx-auto my-10 grid grid-cols-4 gap-5">
                     <>
