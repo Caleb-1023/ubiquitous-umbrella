@@ -72,10 +72,10 @@ const Product = () => {
                         <h2 className="font-bold">{product?.category}</h2>
                         <p>{product?.description}</p>
                         <a href={`https://${product?.contact}`} target="_blank" rel="noreferrer" className="bg-[#16294d] hover:bg-[#0a1323] block w-full text-white text-center py-2 rounded mt-4 p-3">Contact Seller</a>
+                        <button onClick={addToWish} className="bg-purple-800 hover:bg-purple-600 block w-full text-white text-center py-2 rounded mt-4 p-3">Add to Wishlist</button>
                     </div>
                     <div className="w-1/2">
                         <img src={product?.image} alt="" className=" w-full object-cover rounded-xl" />
-                        <button onClick={addToWish}>Add to Wishlist</button>
                     </div>
                 </div>
             </>}
