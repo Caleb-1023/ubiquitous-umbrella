@@ -18,7 +18,7 @@ const CategoryListings = () => {
     const [loading, setLoading] = useState(false)
     // const [section, setSection] = useState('')
 
-    const categories = ['clothing', 'accessories', 'shoes', 'books', 'stationery', 'toiletries', 'food', ]
+    const categories = ['clothing', 'accessories', 'shoes', 'books', 'stationery', 'toiletries', 'food', 'devices' ]
     const halls = ['peter', 'john', 'paul', 'joseph', 'daniel', 'esther', 'mary', 'deborah', 'lydia', 'dorcas']
     
     // const changeSection = () => {
@@ -59,12 +59,12 @@ const CategoryListings = () => {
 
   return (
     <div>
-        <div>
+        <div className="w-screen">
             <h1 className="heading-text text-center text-4xl capitalize">{category}</h1>
             <p></p>
             <Search />
             {/* categories */}
-            <div className="flex flex-wrap items-center justify-center space-x-5 my-5">
+            {/* <div className="flex flex-wrap items-center justify-center space-x-5 my-5">
                 {categories.map((c, i) => {
                     return <Link key={i} to={`/listings/categories/${c}`} onClick={() => {getProductsByCategory(c)}} className={`${c === category ? 'bg-purple-800 text-white':''} border-[1px] border-gray-700 inline-block w-36 text-center capitalize py-2 rounded`}>{c}</Link>
                 })}
@@ -73,6 +73,18 @@ const CategoryListings = () => {
                 {halls.map((h, i) => {
                     return <Link key={i} to={`/listings/halls/${h}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize py-2 rounded`}>{h}</Link>
                 })}
+            </div> */}
+            <div className="w-full flex items-center justify-center">
+                <div className="grid grid-cols-4">
+                    {categories.map((c, i) => {
+                        return <Link key={i} to={`/listings/categories/${c}`} onClick={() => {getProductsByCategory(c)}} className={`${c === category ? 'bg-purple-800 text-white':''} border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{c}</Link>
+                    })}
+                </div>
+                <div className="grid grid-cols-5">
+                    {halls.map((h, i) => {
+                        return <Link key={i} to={`/listings/halls/${h}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{h}</Link>
+                    })}
+                </div>
             </div>
             {/* items */}
             <div className="w-screen min-h-screen">
