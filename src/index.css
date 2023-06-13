@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+.heading-text {
+  font-family: 'Francois One', sans-serif;
+}
