@@ -66,23 +66,23 @@ const HallListings = () => {
             {/* categories */}
             {/* <div className="flex flex-wrap items-center justify-center space-x-5 my-5">
                 {categories.map((c, i) => {
-                    return <Link key={i} to={`/listings/categories/${c}`} className={`border-[1px] border-gray-700 inline-block w-36 text-center capitalize py-2 rounded`}>{c}</Link>
+                    return <Link key={i} to={`/products/categories/${c}`} className={`border-[1px] border-gray-700 inline-block w-36 text-center capitalize py-2 rounded`}>{c}</Link>
                 })}
             </div>
             <div className="flex flex-wrap items-center justify-center space-x-5 my-5">
                 {halls.map((h, i) => {
-                    return <Link key={i} to={`/listings/halls/${h}`} onClick={() => {getProductsByLocation(h)}} className={`${h === hall ? 'bg-purple-800 text-white':''} border-[1px] border-gray-700 inline-block w-28 text-center capitalize py-2 rounded`}>{h}</Link>
+                    return <Link key={i} to={`/products/halls/${h}`} onClick={() => {getProductsByLocation(h)}} className={`${h === hall ? 'bg-purple-800 text-white':''} border-[1px] border-gray-700 inline-block w-28 text-center capitalize py-2 rounded`}>{h}</Link>
                 })}
             </div> */}
             <div className="w-full flex items-center justify-center">
                 <div className="grid grid-cols-4">
                     {categories.map((c, i) => {
-                        return <Link key={i} to={`/listings/categories/${c}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{c}</Link>
+                        return <Link key={i} to={`/products/categories/${c}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{c}</Link>
                     })}
                 </div>
                 <div className="grid grid-cols-5">
                     {halls.map((h, i) => {
-                        return <Link key={i} to={`/listings/halls/${h}`} onClick={() => {getProductsByLocation(h)}} className={`${h === hall ? 'bg-purple-800 text-white':''} border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{h}</Link>
+                        return <Link key={i} to={`/products/halls/${h}`} onClick={() => {getProductsByLocation(h)}} className={`${h === hall ? 'bg-purple-800 text-white':''} border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{h}</Link>
                     })}
                 </div>
             </div>
@@ -98,7 +98,7 @@ const HallListings = () => {
                 <div className="max-w-6xl mx-auto my-10 grid grid-cols-4 gap-5">
                     <>
                         {products?.map((product, i) => {
-                            return <Link key={i} to={`/listings/${product.productSlug}`}><Item item={product} /></Link>
+                            return <Link key={i} to={`/products/${product.productSlug}`}><Item item={product} /></Link>
                         })}
                     </>
                 </div>

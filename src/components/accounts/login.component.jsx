@@ -26,7 +26,7 @@ const Login = () => {
             const roles = "student"
             const name = response?.data?.student?.firstName;
             localStorage.setItem('user', JSON.stringify({ name, roles, accessToken }))
-            navigate('/listings')
+            navigate('/products')
         } catch(err) {
             console.log(err)
             setErrMsg(err?.response?.data?.message)
@@ -37,7 +37,7 @@ const Login = () => {
         const user = localStorage.getItem('user')
         if (user) {
             alert('Already Logged In')
-            navigate('/listings')
+            navigate('/products')
         }
     }
 

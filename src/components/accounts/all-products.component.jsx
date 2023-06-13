@@ -21,7 +21,7 @@ const AllProducts = () => {
             setProducts(response.data.products)
             setLoading(false)
         } else {
-            navigate('/listings')
+            navigate('/products')
         }
     }
 

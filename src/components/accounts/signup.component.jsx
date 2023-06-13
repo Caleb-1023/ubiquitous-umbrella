@@ -40,7 +40,7 @@ const Signup = () => {
         const user = localStorage.getItem('user')
         if (user) {
             alert('Already Logged In')
-            navigate('/listings')
+            navigate('/products')
         }
     }
 

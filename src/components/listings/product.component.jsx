@@ -62,7 +62,7 @@ const Product = () => {
             </>
             :
             <>
-                <div className="mb-10"><Link to={'listings'} className="hover:underline">All Listings</Link> / <Link to={`/listings/categories/${product?.category}`} className="capitalize hover:underline">{product?.category}</Link> / <span className="text-gray-400">{product?.name}</span></div>
+                <div className="mb-10"><Link to={'products'} className="hover:underline">All Products</Link> / <Link to={`/products/categories/${product?.category}`} className="capitalize hover:underline">{product?.category}</Link> / <span className="text-gray-400">{product?.name}</span></div>
                 <div className="w-full flex items-start justify-between space-x-10">
                     <div className="w-1/2 capitalize">
                         <h1 className="heading-text text-4xl mb-2">{product?.name}</h1>

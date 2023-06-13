@@ -60,19 +60,19 @@ const Listings = () => {
   return (
     <div>
         <div className="w-screen">
-            <h1 className="heading-text text-center text-4xl capitalize">All Listings</h1>
+            <h1 className="heading-text text-center text-4xl capitalize">All Products</h1>
             <p></p>
             <Search />
             {/* categories */}
             <div className="w-full flex items-center justify-center">
                 <div className="grid grid-cols-4">
                     {categories.map((c, i) => {
-                        return <Link key={i} to={`/listings/categories/${c}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{c}</Link>
+                        return <Link key={i} to={`/products/categories/${c}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{c}</Link>
                     })}
                 </div>
                 <div className="grid grid-cols-5">
                     {halls.map((h, i) => {
-                        return <Link key={i} to={`/listings/halls/${h}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{h}</Link>
+                        return <Link key={i} to={`/products/halls/${h}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{h}</Link>
                     })}
                 </div>
             </div>
@@ -88,7 +88,7 @@ const Listings = () => {
                 <div className="max-w-6xl mx-auto my-10 grid grid-cols-4 gap-5">
                     <>
                         {products?.map((product, i) => {
-                            return <Link key={i} to={`/listings/${product.productSlug}`}><Item item={product} /></Link>
+                            return <Link key={i} to={`/products/${product.productSlug}`}><Item item={product} /></Link>
                         })}
                     </>
                 </div>

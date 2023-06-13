@@ -34,7 +34,7 @@ const Navbar = () => {
             <div className="flex items-center justify-around space-x-3">
                 <Link to={'/'}><img src="/cumart.png" alt="logo" className="w-14" /></Link>
                 <ul className="flex items-center justify-around space-x-3">
-                    <li><Link to={'/listings'}>All Listings</Link></li>
+                    <li><Link to={'/products'}>All Products</Link></li>
                     <li><Link to={'/faqs'}>FAQs</Link></li>
                     <li><Link to={'/about'}>About</Link></li>
                 </ul>
@@ -51,7 +51,7 @@ const Navbar = () => {
                     </>
                     : 
                     <>
-                        <Link to={'listings/add-product'} className="capitalize text-black"><i className="fa-solid fa-plus"></i> Add Product</Link>
+                        <Link to={'products/add-product'} className="capitalize text-black"><i className="fa-solid fa-plus"></i> Add Product</Link>
                         <Link to={'account'} className="capitalize text-black">{user.name}</Link>
                     </>
                     }

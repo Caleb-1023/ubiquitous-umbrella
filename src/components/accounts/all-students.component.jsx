@@ -19,7 +19,7 @@ const AllStudents = () => {
             setStudents(response.data.students)
             setLoading(false)
         } else {
-            navigate('/listings')
+            navigate('/products')
         }
     }
 

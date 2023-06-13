@@ -9,7 +9,7 @@ const Halls = () => {
         <h1 className="heading-text text-4xl text-center">Category</h1>
         <div className="grid grid-cols-4 gap-10 my-10">
             {halls.map((h,i) => {
-                return <Link to={`/listings/halls/${h}`} key={i}><Hall name={h} image={'/category-graduation.png'} /></Link>
+                return <Link to={`/products/halls/${h}`} key={i}><Hall name={h} image={'/category-graduation.png'} /></Link>
             })}
         </div>
     </div>

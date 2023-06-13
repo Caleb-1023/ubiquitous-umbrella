@@ -60,7 +60,7 @@ const router = createBrowserRouter(
       <Route path='/' element={<Pages />}>
       <Route index element={<Home />} />
       <Route path='search/:query' element={<SearchListings />} />
-      <Route path='listings'>
+      <Route path='products'>
         <Route index element={<Listings />} />
         <Route path=':productSlug' element={<Product />} />
         <Route path='add-product' element={<AddProduct />} />

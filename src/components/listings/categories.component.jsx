@@ -10,7 +10,7 @@ const Categories = () => {
         <h1 className="heading-text text-4xl text-center">Category</h1>
         <div className="grid grid-cols-4 gap-10 my-10">
             {categories.map((c,i) => {
-                return <Link to={`/listings/categories/${c}`} key={i}><Category name={c} image={'/category-graduation.png'} /></Link>
+                return <Link to={`/products/categories/${c}`} key={i}><Category name={c} image={'/category-graduation.png'} /></Link>
             })}
         </div>
     </div>

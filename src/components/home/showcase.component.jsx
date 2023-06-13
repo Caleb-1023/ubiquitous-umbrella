@@ -10,7 +10,7 @@ const Showcase = () => {
                 {/* <form action="">
                     <input type="text" />
                 </form> */}
-                <Link to={'/listings'} className="text-xl text-white p-3 bg-[#0d182d] rounded-lg my-3">View All Listings</Link>
+                <Link to={'/products'} className="text-xl text-white p-3 bg-[#0d182d] rounded-lg my-3">View All Listings</Link>
             </div>
         </div>
     </div>

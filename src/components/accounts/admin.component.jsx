@@ -25,7 +25,7 @@ const Admin = () => {
             const accessToken = response?.data?.signature;
             const roles = "admin"
             localStorage.setItem('user', JSON.stringify({ name: 'Admin', roles, accessToken }))
-            navigate('/listings')
+            navigate('/products')
         } catch (err) {
             console.log(err)
             setErrMsg(err?.response?.data?.message)
@@ -36,7 +36,7 @@ const Admin = () => {
         const user = localStorage.getItem('user')
         if (user) {
             alert('Already Logged In')
-            navigate('/listings')
+            navigate('/products')
         }
     }
 
