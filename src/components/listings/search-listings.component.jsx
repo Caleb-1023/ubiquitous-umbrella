@@ -57,7 +57,7 @@ const SearchListings = () => {
   return (
     <div>
         <div>
-            <h1 className="heading-text text-center text-4xl capitalize">Products matching `{query}`</h1>
+            <h1 className="heading-text text-center text-4xl">Products matching `{query}`</h1>
             <p></p>
             <Search />
             {/* categories */}
