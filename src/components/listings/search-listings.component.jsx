@@ -87,7 +87,7 @@ const SearchListings = () => {
                     return <Link key={i} to={`/products/halls/${h}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize py-2 rounded`}>{h}</Link>
                 })}
             </div> */}
-            <div className="w-full flex items-center justify-center">
+            {/* <div className="w-full flex items-center justify-center">
                 <div className="grid grid-cols-4">
                     {categories.map((c, i) => {
                         return <Link key={i} to={`/products/categories/${c}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{c}</Link>
@@ -98,7 +98,7 @@ const SearchListings = () => {
                         return <Link key={i} to={`/products/halls/${h}`} className={`border-[1px] border-gray-700 inline-block w-28 text-center capitalize m-3 py-2 rounded`}>{h}</Link>
                     })}
                 </div>
-            </div>
+            </div> */}
             {/* items */}
             <div className="w-screen min-h-screen">
             {loading ? 
