@@ -92,7 +92,7 @@ const SearchListings = () => {
             :
             <>
                 {products?.length > 0 ? 
-                <div className="max-w-6xl m-auto grid grid-cols-4 gap-5">
+                <div className="max-w-6xl mx-auto my-10 grid grid-cols-4 gap-5">
                     <>
                         {products?.map((product, i) => {
                             return <Link key={i} to={`/listings/${product.productSlug}`}><Item item={product} /></Link>
