@@ -73,8 +73,8 @@ const AddProduct = () => {
                 <i className="fa-solid fa-check fa-2xl text-6xl text-green-900 border-4 p-5 border-green-900 rounded-full"></i>
                 <p className='text-4xl font-bold'>Product Added</p>
                 <div className='flex items-center justify-center space-x-5'>
-                    <Link to={'/listings'} className='p-3 rounded-lg bg-[#16294d] hover:bg-[#0a1323]'>Listings</Link>
-                    <button onClick={() => {window.location.reload()}} className='p-3 rounded-lg bg-purple-800 hover:bg-purple-600'>Add Another Product</button>
+                    <Link to={'/listings'} className='p-3 rounded-lg bg-[#16294d] hover:bg-[#082a6a] text-white'>Listings</Link>
+                    <button onClick={() => {window.location.reload()}} className='p-3 rounded-lg bg-purple-800 hover:bg-purple-600 text-white'>Add Another Product</button>
                 </div>
             </div>
             :
