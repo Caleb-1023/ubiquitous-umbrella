@@ -7,8 +7,8 @@ const Item = ({item}) => {
         <div className="h-[40%] p-3 capitalize">
             <h3 className="font-bold">{item.name}</h3>
             <h4 className="font-bold">₦{item.price}</h4>
-            <h5 className="text-gray-500">{item.seller}</h5>
             <p className="text-gray-500">{item.description}</p>
+            <h5 className="text-gray-700 my-2">{item.firstName} {item.lastName}</h5>
         </div>
     </div>
   )

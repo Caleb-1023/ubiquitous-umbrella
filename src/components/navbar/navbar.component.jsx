@@ -50,7 +50,7 @@ const Navbar = () => {
                     </>
                     : 
                     <>
-                        <Link to={'/wishlist'} className="text-black hover:underline">Wishlist</Link>
+                        {/* <Link to={'/wishlist'} className="text-black hover:underline">Wishlist</Link> */}
                         <Link to={'products/add-product'} className="text-black hover:underline"><i className="fa-solid fa-plus"></i> Add Product</Link>
                         <Link to={'account'} className="capitalize text-black hover:underline">{user.name}</Link>
                     </>

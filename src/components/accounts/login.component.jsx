@@ -25,7 +25,8 @@ const Login = () => {
             const accessToken = response?.data?.signature;
             const roles = "student"
             const name = response?.data?.student?.firstName;
-            localStorage.setItem('user', JSON.stringify({ name, roles, accessToken }))
+            const contact = response?.data?.student?.telegramUserName;
+            localStorage.setItem('user', JSON.stringify({ name, roles, accessToken, contact }))
             navigate('/products')
         } catch(err) {
             console.log(err)
