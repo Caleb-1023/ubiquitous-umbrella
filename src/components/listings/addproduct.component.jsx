@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from '../../api/axios'
 import { FileUploader } from "react-drag-drop-files";
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const UPLOAD_PRODUCT = 'product/createproduct'
 const GET_PRODUCT = 'product/getsingleproduct/'
@@ -10,6 +10,7 @@ const EDIT_PRODUCT = 'product/edit/'
 const fileTypes = ["JPG", "PNG", "GIF"];
 
 const AddProduct = () => {
+    const navigate = useNavigate()
     const { productSlug } = useParams()
 
     const [ name, setName ] = useState('')
@@ -23,6 +24,10 @@ const AddProduct = () => {
     const [errMsg, setErrMsg] = useState()
 
     const token = JSON.parse(localStorage.getItem('user')).accessToken
+
+    if (!token) {
+        navigate('/products')
+    }
 
     const getProduct = async () => {
             const response = await axios.get(`${GET_PRODUCT}${productSlug}`)
